@@ -7,13 +7,17 @@
 // Use the event pool to gather events
 const events = require('../events/events');
 
-events.on('pickup', (payload) => {
-  setInterval( (payload) => {
-    console.log(`DRIVER: picked up ${payload.orderId}`);
-  }, 1000);
+events.on('pickup', doPickup);
+
+function doPickup(payload) {
+  console.log('Payload OID: ', payload.orderId);
   setInterval( () => {
-    events.emit('delivered', (payload) => {
-      console.log(`DRIVER: delivered up ${payload.orderId}`);
-    })
+    console.log(`DRIVER: picked up ${payload.orderId}`);
+    events.emit('in-transit', payload);
+  }, 1000);
+  
+  setInterval( () => {
+    console.log(`DRIVER: delivered up ${payload.orderId}`);
+    events.emit('delivered', payload);
   }, 3000);
-});
+}

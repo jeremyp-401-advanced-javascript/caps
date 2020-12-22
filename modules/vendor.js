@@ -10,16 +10,21 @@ require('dotenv').config();
 const events = require('../events/events');
 // Use faker to create order data
 var faker = require('faker');
-let orderStore = process.env.STORE_NAME;
-let orderId = faker.random.uuid();
-let orderCustomer = faker.name.findName();
-let orderAddress = `${faker.address.streetAddress(true)}, ${faker.address.city()}, ${faker.address.stateAbbr()} ${faker.address.zipCodeByState()}`;
 
 setInterval( () => {
+  let orderStore = process.env.STORE_NAME;
+  let orderId = faker.random.uuid();
+  let orderCustomer = faker.name.findName();
+  let orderAddress = `${faker.address.streetAddress(true)}, ${faker.address.city()}, ${faker.address.stateAbbr()} ${faker.address.zipCodeByState()}`;
+
   let customerOrder = { orderStore, orderId, orderCustomer, orderAddress };
   events.emit('pickup', customerOrder);
 }, 5000);
 
-events.on('delivered', (payload) => {
+
+events.on('delivered', doDelivery);
+
+
+function doDelivery (payload) {
   console.log(`VENDOR: Thank you for delivering ${payload.orderId}`);
-})
+};
