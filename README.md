@@ -4,21 +4,11 @@
 
 Tactically, this will be an event driven application that "distributes" the responsibility for logging to separate modules, using only events to trigger logging based on activity.
 
-## Before you begin
-
-Refer to *Getting Started*  in the [lab submission instructions](../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
-
-Create a UML diagram of the **CAPS** system on a whiteboard before you start
-
-> Create a new repository for this project, called 'caps' and work in a branch called 'events'
-
-## Business Requirements
-
-Refer to the [CAPS System Overview](../../apps-and-libraries/caps/README.md) for a complete review of the application, including Business and Technical requirements along with the development roadmap.
-
 ## Phase 1 Requirements
 
 Today, we begin the first of a 4-Phase build of the CAPS system, written in Node.js. In this first phase, our goal is to setup a system of events and handlers, with the intent being to change out the eventing system as we go, but keeping the handlers themselves largely the same. The task of "delivering a package" doesn't change (the handler), even if the mechanism for triggering that task (the event) does.
+
+### User/Developer Stories
 
 The following user/developer stories detail the major functionality for this phase of the project.
 
@@ -62,6 +52,8 @@ Create the CAPS system as follows:
       - Log "delivered" to the console
       - Emit a 'delivered' event with the same payload
 
+### Expected Output
+
 When running, your console output should look something like this:
 
 ```javascript
@@ -99,6 +91,6 @@ EVENT { event: 'delivered',
 
 **Testing Note** - *The "event system" in Node.js has already been tested. What we want to test here is connectivity -- is your code responding to the right events?"
 
-## Assignment Submission Instructions
+## Whiteboard / UML
 
-Refer to the the [lab submission instructions](../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations
+![whiteboard-caps](./assets/CAPSWhiteboardUML_SS.png)
