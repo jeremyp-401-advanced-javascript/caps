@@ -1,10 +1,8 @@
 'use strict';
 
 // Load in the modules
-const events = require('../events/events');
-const caps = require('../caps');
-const driver = require('../modules/driver');
-const vendor = require('../modules/vendor');
+//const caps = require('../caps');
+const { logEvent } = require('../modules/logEvent');
 
 describe('CAPS Console Logs', () => {
   let consoleSpy;
@@ -25,15 +23,15 @@ describe('CAPS Console Logs', () => {
   });
 
   it('verifies the "pickup" emit triggers console logs in CAPS', () => {
-    events.emit('pickup', customerOrder);
+    logEvent('pickup', customerOrder);
     expect(consoleSpy).toHaveBeenCalledTimes(1); // Just the 1 from caps.js
   });
   it('verifies the "in-transit" emit triggers console logs in CAPS', () => {
-    events.emit('in-transit', customerOrder);
+    logEvent('in-transit', customerOrder);
     expect(consoleSpy).toHaveBeenCalledTimes(1); // Just the 1 from caps.js
   });
   it('verifies the "delivered" emit triggers console logs in CAPS', () => {
-    events.emit('delivered', customerOrder);
-    expect(consoleSpy).toHaveBeenCalledTimes(2); // The console.log in caps.js and vendor.js thank you.
+    logEvent('delivered', customerOrder);
+    expect(consoleSpy).toHaveBeenCalledTimes(1); // The console.log in caps.js and vendor.js thank you.
   });
 });
