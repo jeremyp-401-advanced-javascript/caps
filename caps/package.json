@@ -1,0 +1,28 @@
+{
+  "name": "caps",
+  "version": "1.0.0",
+  "description": "Code Academy Parcel Service",
+  "main": "caps.js",
+  "scripts": {
+    "start": "node caps.js",
+    "lint": "eslint **/*.js",
+    "test": "jest --coverage",
+    "test-watch": "jest --watchAll --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremyp-401-advanced-javascript/caps.git"
+  },
+  "author": "Jeremy Penning",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeremyp-401-advanced-javascript/caps/issues"
+  },
+  "homepage": "https://github.com/jeremyp-401-advanced-javascript/caps#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "faker": "^5.1.0",
+    "jest": "^26.6.3",
+    "socket.io": "^3.0.4"
+  }
+}
