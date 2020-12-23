@@ -1,10 +1,10 @@
 {
-  "name": "caps",
+  "name": "vendor",
   "version": "1.0.0",
   "description": "Code Academy Parcel Service",
-  "main": "caps.js",
+  "main": "vendor.js",
   "scripts": {
-    "start": "node caps.js",
+    "start": "node vendor.js",
     "lint": "eslint **/*.js",
     "test": "jest --coverage",
     "test-watch": "jest --watchAll --coverage"
