@@ -1,10 +1,10 @@
 {
-  "name": "caps",
+  "name": "driver",
   "version": "1.0.0",
-  "description": "CAPS - Code Academy Parcel Service (with Socket.io)",
-  "main": "./caps/caps.js",
+  "description": "Code Academy Parcel Service",
+  "main": "driver.js",
   "scripts": {
-    "start": "node ./caps/caps.js",
+    "start": "node driver.js",
     "lint": "eslint **/*.js",
     "test": "jest --coverage",
     "test-watch": "jest --watchAll --coverage"
@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/jeremyp-401-advanced-javascript/caps#readme",
   "dependencies": {
-    "jest": "^26.6.3"
+    "dotenv": "^8.2.0",
+    "faker": "^5.1.0",
+    "jest": "^26.6.3",
+    "socket.io-client": "^3.0.4"
   }
 }
