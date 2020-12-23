@@ -7,6 +7,7 @@
 // Load in the modules
 require('dotenv').config();
 const { logEvent } = require('./modules/logEvent');
+
 // Get PORT from .env
 const port = process.env.PORT || 3000;
 const io = require('socket.io')(port);
