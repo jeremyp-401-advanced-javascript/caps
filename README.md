@@ -28,7 +28,7 @@ To run tests (inside the application folders):
 
 `npm test`
 
-### Sample Output (caps.js)
+### Sample Output (/caps/caps.js)
 
 __Some output has been removed for clarity__
 
@@ -71,7 +71,7 @@ EVENT {
 
 ```
 
-### Sample Output (vendor.js)
+### Sample Output (/vendor/vendor.js)
 
 ```
 VENDOR: Thank you for delivering e4bd2287-13c1-4dfe-9340-b93fcdadb5aa
@@ -88,7 +88,7 @@ VENDOR: Thank you for delivering 6c623280-f904-44ba-8955-f22dc3489b57
 
 ```
 
-### Sample Output (driver.js)
+### Sample Output (/driver/driver.js)
 
 ```
 Picking up e4bd2287-13c1-4dfe-9340-b93fcdadb5aa
