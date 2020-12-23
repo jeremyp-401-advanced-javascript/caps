@@ -5,9 +5,7 @@
   "main": "caps.js",
   "scripts": {
     "start": "node caps.js",
-    "lint": "eslint **/*.js",
-    "test": "jest --coverage",
-    "test-watch": "jest --watchAll --coverage"
+    "test": "npm test"
   },
   "repository": {
     "type": "git",
