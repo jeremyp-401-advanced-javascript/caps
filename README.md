@@ -1,6 +1,6 @@
-# LAB - Class 12
+# LAB - Class 13
 
-## Project: CAPS - Code Academy Parcel Service (with Socket.io)
+## Project: CAPS - Code Academy Parcel Service (with Socket.io) (And Messgage Queue)
 
 ### Author: Jeremy Penning
 
