@@ -1,8 +1,7 @@
 'use strict';
 
 // Load in the modules
-const events = require('../events/events');
-const driver = require('../modules/driver');
+const driver = require('../driver');
 
 describe('Driver Console Logs', () => {
   let consoleSpy;
@@ -22,14 +21,14 @@ describe('Driver Console Logs', () => {
     consoleSpy.mockRestore();
   });
 
-  it('verifies that didPickup() logs a pickup properly', () => {
-    driver.didPickup(customerOrder);
+  it('verifies that doPickup() logs a pickup properly', () => {
+    driver.doPickup(customerOrder);
     expect(consoleSpy)
-      .toHaveBeenCalledWith('DRIVER: picked up 9b8a70b8-49a8-4657-ab44-be1f8201291c');
+      .toHaveBeenCalledWith(`Picking up ${customerOrder.orderId}`);
   });
-  it('verifies that didDelivery() logs a delivery properly', () => {
-    driver.didDelivery(customerOrder);
+  it('verifies that doDelivery() logs a delivery properly', () => {
+    driver.doDelivery(customerOrder);
     expect(consoleSpy)
-      .toHaveBeenCalledWith('DRIVER: delivered up 9b8a70b8-49a8-4657-ab44-be1f8201291c');
+      .toHaveBeenCalledWith(`Delivering up ${customerOrder.orderId}`);
   });
 });
