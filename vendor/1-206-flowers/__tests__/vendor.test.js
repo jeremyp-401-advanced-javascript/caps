@@ -25,13 +25,14 @@ describe('Vendor Console Logs', () => {
 
   it('creates a new order object', () => {
     let customerOrder = vendor.createOrder();
+    console.log('CO:', customerOrder);
     expect(customerOrder.orderStore).toBe(storeName);
   });
 
   it('verifies that the vendor says thanks after an order is delivered', () => {
     vendor.sayThanks(mockOrder);
     expect(consoleSpy)
-      .toHaveBeenCalledWith(`VENDOR: Thank you for delivering ${mockOrder.orderId}`);
+      .toHaveBeenCalledWith(`VENDOR: Thank you for delivering ${mockOrder.payload.orderId}`);
   });
 
   // `VENDOR: Thank you for delivering ${payload.orderId}`

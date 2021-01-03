@@ -1,10 +1,10 @@
 {
-  "name": "caps",
+  "name": "vendor",
   "version": "1.0.0",
   "description": "Code Academy Parcel Service",
-  "main": "queue-server.js",
+  "main": "vendor.js",
   "scripts": {
-    "start": "node queue-server.js",
+    "start": "node vendor.js",
     "lint": "eslint **/*.js",
     "test": "jest --coverage",
     "test-watch": "jest --watchAll --coverage"
@@ -23,6 +23,6 @@
     "dotenv": "^8.2.0",
     "faker": "^5.1.0",
     "jest": "^26.6.3",
-    "socket.io": "^3.0.4"
+    "socket.io-client": "^3.0.4"
   }
 }
